@@ -256,7 +256,7 @@ public class OAuthSwiftClient {
         let parameterString = parameterComponents.joinWithSeparator("&")
         let encodedParameterString = parameterString.urlEncodedStringWithEncoding(dataEncoding)
         
-        let encodedURL = url.absoluteString.urlEncodedStringWithEncoding(dataEncoding)
+        let encodedURL = url.absoluteString!.urlEncodedStringWithEncoding(dataEncoding)
         
         let signatureBaseString = "\(method)&\(encodedURL)&\(encodedParameterString)"
         
